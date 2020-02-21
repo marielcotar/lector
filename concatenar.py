@@ -15,6 +15,9 @@ def main(archivos, output):
     textos = juntar_archivos( archivos )
     texto_limpio = " ".join(textos)
     print (texto_limpio)
+    
+    with open(output, 'w') as f:
+            f.write(texto_limpio)
 
 if __name__== "__main__":
     parser = argparse.ArgumentParser()
